@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Create Account</title>
+		<style>
+			body
+			{
+				text-align: center;
+				padding-top: 120px;
+				padding-left: 400px;
+				font-family: Arial;
+				font-size: 16px;
+				font-weight: bold;
+				color: black;
+				background-image: url(TBG.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+			}
+
+			}
+			.jfvx
+			{
+				color: green;
+
+			}
+			.jfv1
+			{
+				width: 700px;
+				background-color: skyblue;
+			}
+			.jfv2
+			{
+				padding-left: 40px;
+			}
+			.jfv3
+			{
+				padding-left: 20px;
+			}
+			.jfv5
+			{
+				padding-left: 70px;
+			}
+			.jfv8
+			{
+				padding-left: 90px;
+			}
+			.jfv0
+			{
+				padding-left: 35px; 
+			}
+			.submit 
+			{
+			background: #0066A2;
+			color: white;
+			font-size: 17px;
+			height: 30px;
+			width: 100px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="grad"></div>
+			<script>
+				function validate()
+				{
+					var name="";
+					var name_length="";
+					name= document.getElementById("jfvname").value;
+					name_length = name.length;
+					if(name_length==0)
+					{
+						alert("Name should not be blank");
+					}
+
+					var mname="";
+					var mname_length="";
+					mname= document.getElementById("jfvmname").value;
+					mname_length = mname.length;
+					if(mname_length==0)
+					{
+						alert("Middle Name should not be blank");
+					}
+
+					var sname="";
+					var sname_length="";
+					sname= document.getElementById("jfvsname").value;
+					sname_length = sname.length;
+					if(sname_length==0)
+					{
+						alert("Surame should not be blank");
+					}
+
+					var age="";
+					var age_length="";
+					age = document.getElementById("jfvage").value;
+					age_length= age.length;
+					if (age_length>3)
+					{
+						alert("Enter Valid Age");
+					}
+
+					var phoneno ="";
+					var phoneno_length=0;
+					phoneno= document.getElementById("phone").value;
+					phoneno_length= phoneno.length;
+					if(phoneno_length!=13)
+					{
+						alert("Enter Valid Phone Number");
+					}
+					else if(phoneno.charAt(0)!='+' || phoneno.charAt(1)!=9 || phoneno.charAt(2)!=1)
+					{
+						alert("Enter Valid Phone Number Starting With +91");
+					}
+
+					var email="";
+					var email_length=0;
+					var i=0;
+					var flag=0;
+					email = document.getElementById("email").value;
+					email_length = email.length;
+					for(i=0;i<email_length;i++)
+					{
+						if(email.charAt(i)=='@')
+						{
+							flag=flag+1;
+						}
+						if(email.charAt(i)=='.' && email.charAt(i+1)=='.')
+						{
+							alert("Invalid Email Address. '..' Found");
+						}
+					}	
+					if(flag==0)
+					{
+						alert("Invalid Email Address. '@' Not Found");
+					}
+					else if(flag>1)
+					{
+						alert("Invalid Email Address. Multiple '@' Found");
+					}
+				}
+			</script>
+
+		<p>
+			<fieldset class="jfv1">
+				<h2 class="jfvx">Create Account</h2>
+			<form>				
+					<lable class="jfv2">Enter Name <b>*</b> : </lable><input type="text" id="jfvname" placeholder="Your name..">
+					</br></br>
+					<lable class="jfv5">Enter Age : </lable><input type="text" id="jfvage" placeholder="Your Age..">
+					</br></br>
+					<label class="jfv8"> Enter Gender </label><input type="radio" name="age">
+        			<label for="age1">Male</label>
+        			<input type="radio" name="age">
+        			<label for="age1">Female</label>
+      				<input type="radio" name="age">
+        			<label for="age1">Other</label>
+       				<br><br>
+					<lable>Enter Phone Number: </lable><input type="text" id="phone" placeholder="Your Phonenumber..">
+					</br></br>
+					<lable>Enter Email Address : </lable><input type="text" id="email" placeholder="Your Email address..">
+					</br></br>
+					<lable class="jfv0">Enter Password : </lable><input type="Password" id="pass" placeholder="Your Password..">
+					</br></br></br>
+					<button class="submit" onclick="validate()">SUBMIT</button>
+			</form>
+			</fieldset>
+		</p>
+	</body>
+</html>

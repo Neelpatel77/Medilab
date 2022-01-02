@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Emergency</title>
+
+    <style>
+      body 
+        {
+          background-image: url("xyz2.jpg");
+          background-repeat: no-repeat;
+          background-size: 800px 750px;
+        }
+    </style>
+    <script>
+      function amb1()
+      {
+        alert("Your details are successfully uploaded.");
+      }
+    </script>
+  </head>
+
+    <body>
+      <div class="inner-layer">
+          <div class="container">
+            <div class="row no-margin">
+                <div class="col-sm-7">
+                    <div class="content">
+                        <h1>Emergency Services</h1>
+                        <p>Don't Risk Someone's Life </p>
+                        <h2>Call Ambulance On: 108</h2>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-data">
+                        <div class="form-head">
+                            <h2 align="center">Online Ambulance</h2>
+                        </div>
+                        <div class="form-body">
+                            <div class="row form-row">
+                              <input type="text" placeholder="Enter Full name" class="form-control">
+                            </div>
+                            <div class="row form-row">
+                              <input type="text" placeholder="Enter Mobile Number" class="form-control">
+                            </div>
+                            <div class="row form-row">
+                              <input type="text" placeholder="Enter Reason" class="form-control">
+                            </div>
+                             <div class="row form-row">
+                              <input type="text" placeholder="Enter Hospital Name" class="form-control">
+                            </div>
+                           <div class="row form-row">
+                              <input type="text" placeholder="Enter Your Adreess" class="form-control">
+                            </div>
+                          
+                             <div class="row form-row">
+                               <button class="btn btn-success btn-appointment" id="amb" onclick="amb1()">
+                                 Call 
+                               </button>
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+    </body>
+  
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+    <script>
+      $(document).ready(function(){
+          $("#dat").datepicker();
+      })
+    </script>
+    
+  </body>
+</html>

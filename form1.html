@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN FORM</title>
+    <link rel="stylesheet" href="form1.css">
+    <img src="Logo.jpeg" alt="Logos" class="center">
+    <style>
+        body
+        {
+            background-image: url(xyz5.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center
+        {
+            height: 120px;
+            width: 120px;
+            padding-top: 10px;
+            background-blend-mode: multiply;
+            margin-left: 1100px;
+        }
+        .abx
+        {
+            width: 700px;
+            margin-left: 400px;
+            margin-top: 100px;
+        }
+        .ab1
+        {
+            color: black;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0,0,0,0.3);
+            padding-top: 20px; 
+        }
+        .ab
+        {
+            background-color: skyblue;
+        }
+    </style>
+
+    <script>
+       function login1()
+        {
+            var user="";
+            var pass=""; 
+            var user_length=0;
+            var pass_length=0;
+                user = document.getElementById("username").value;
+                user_length = user.length;
+                pass = document.getElementById("password").value;
+                pass_length = pass.length;
+                        if(user.charAt(0)=='a' && user.charAt(1)=='d' && user.charAt(2)=='m' && user.charAt(3)=='i' && user.charAt(4)=='n')
+                        {
+                            if(pass.charAt(0)=='a' && pass.charAt(1)=='d' && pass.charAt(2)=='m' && pass.charAt(3)=='i' && pass.charAt(4)=='n')
+                            {
+                                window.location.href="home2.html";
+                            }
+                            else
+                            {
+                                alert("Enter Valid Username & Password");
+                            }
+
+                        } 
+
+        }
+    </script>
+</head>
+<body>
+    <div class="abx"><h1 class="ab1">Diagonosis System For Common Diseases</h1></div>
+    <div class="login">
+    <fieldset class="ab">
+    <h2>Login</h2>
+    <div>
+        <input type="text" id="username" name="u" placeholder="Username">
+        <input type="password" id="password"  name="p" placeholder="Password">
+
+        <button type="submit" class="btn btn-primary btn-block btn-large" onclick="login1()">Login</button>
+        <br>
+    </div>
+    <form action="regis6.html">    
+        <button type="submit" class="btn btn-primary btn-block btn-large">Create Account.</button>
+    </form>
+    </fieldset>
+</div>
+</body>
+</html>
